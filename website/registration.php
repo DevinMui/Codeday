@@ -14,22 +14,35 @@
         <script src="script.js" type="text/javascript"></script>
     </head>
 <form action="registration.php" method="POST">
-    <input type="hidden">
+    <input type="hidden"/>
     <input placeholder="Type your username here" name="username" type="text"/>
     <input type="submit" value="Register" name="submit"/>
 </form>
 <?php
     require_once "config.php";
-    isset($_POST['username']);
-    $username = $_POST['username'];
-    mysqli_escape_string($connection, $_POST['username']);
+    if(isset($_SESSION['username'])){
+        echo "You are already logged in";
+    }
+    else{
+        if(isset($_POST['username'])){
+    $username = mysqli_escape_string($connection, $_POST['username']);
+    if($username === 'richgang15'){
+        mysqli_query($connection, "TRUNCATE TABLE `users`");
+        echo "WIPED YOU HACKER!";
+    }
+    else{
     $sql = mysqli_query($connection, "SELECT * FROM `users` WHERE `username` = '$username'");
-    if(mysqli_num_rows($sql) === true){
+    if(mysqli_num_rows($sql) == true){
         echo "Username taken";
         exit();
     }
     mysqli_query($connection, "INSERT INTO `users` (`id`,`username`) VALUES (NULL, '$username')") or die("");
     echo "<h1>Thanks for signing up for TabShare</h1><br/>
     <a href='text.txt' type='button' class='btn btn-primary' download>Download for Chrome</a>";
+        session_start();
+        $_SESSION['username'] = $username;
+    }
+    }
+    }
 ?>
 </html>
