@@ -1,7 +1,5 @@
 body{
-    background: linear-gradient(#AE39CC,#8B2EA3);
-    background: -o-linear-gradient(#AE39CC,#8B2EA3);
-    background: -moz-linear-gradient(#AE39CC,#8B2EA3);
+    background-color: #AE39CC;
     font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
     overflow: scroll;
 }
@@ -57,6 +55,9 @@ body{
     height: 350px;
 }
 #fixed-footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
+    display:block;
+    margin-left: 7%;
+    margin-right: 25%;
 }

@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/icon" href="assets/favicon.png">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!--includes stylesheet, jquery, and js file-->
-        <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="css/bootstrap.min.js" type="text/javascript"></script>
         <script src="script.js" type="text/javascript"></script>
@@ -49,7 +49,7 @@
     }
 ?>
     </div>
-    <nav class="navbar navbar-default navbar-static-bottom" role="navigation">
+    <nav id="fixed-footer" class="navbar navbar-default navbar-static-bottom" role="navigation">
         <div class="container text-center">
             <a href="./contact.html">Contact Us</a> | <a href="https://github.com/playerzomb/Codeday">Github</a> | <a href="./login.php">Log In</a> | <a href="./registration.php">Register</a>
         </div>
