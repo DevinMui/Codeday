@@ -20,10 +20,11 @@
 </form>
 <?php
     require_once "config.php";
+    isset($_POST['username']);
     $username = $_POST['username'];
     mysqli_escape_string($connection, $_POST['username']);
     $sql = mysqli_query($connection, "SELECT * FROM `users` WHERE `username` = '$username'");
-    if(mysqli_num_rows($sql) == true){
+    if(mysqli_num_rows($sql) === true){
         echo "Username taken";
         exit();
     }

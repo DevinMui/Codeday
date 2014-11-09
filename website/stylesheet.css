@@ -50,3 +50,6 @@ body{
     text-decoration: none;
     color: white;
 }
+.jumbotron{
+    background: url('assets/GroupPicture.jpg') no-repeat center center;
+}
