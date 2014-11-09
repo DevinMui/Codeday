@@ -1,3 +1,12 @@
+<?php
+    header("content-type:application/json");
+    $username = array(
+    array
+        (
+            
+        )
+    )
+?>
 <!doctype html>
 <html>
   <head>
@@ -32,9 +41,10 @@ g       try {
         }
       ?>
       <?php
-        $connection = mysqli_connect("23.229.227.134", "nancoder", "53M1Col0n");
-        mysqli_select_db($connection, "username");
-        mysqli_query($connection, "TRUNCATE TABLE `users`");
+        
+        if(isset($_POST['username']))
+            echo json_encode('username');
+        exit();
       ?>
       <h1><b><u>TabShare</u></b></h1>
       <?php

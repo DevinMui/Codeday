@@ -1,5 +1,7 @@
 body{
-    background-color: #AE39CC;
+    background: linear-gradient(#AE39CC,#8B2EA3);
+    background: -o-linear-gradient(#AE39CC,#8B2EA3);
+    background: -moz-linear-gradient(#AE39CC,#8B2EA3);
     font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
     overflow: scroll;
 }

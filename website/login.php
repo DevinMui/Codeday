@@ -1,3 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TabShare | Contact Us!</title>
+    <link rel="shortcut icon" type="image/icon" href="assets/favicon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--includes stylesheet, jquery, and js file-->
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="css/bootstrap.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <a href="index.html"><img id="general-center" class="img-responsive" src="assets/logo.png" alt="TabShare"></a>
+    <div class="text-center">
 <?php
     require_once "config.php";
     if(isset($_POST['username'])){
@@ -25,3 +43,6 @@
         </form>";
     }
 ?>
+    </div>
+</body>
+</html>

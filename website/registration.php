@@ -12,12 +12,15 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="css/bootstrap.min.js" type="text/javascript"></script>
         <script src="script.js" type="text/javascript"></script>
-    </head>
-<form action="registration.php" method="POST">
+</head>
+<body>
+<a href="index.html"><img id="general-center" class="img-responsive" src="assets/logo.png" alt="TabShare"></a>
+<form class="text-center" action="registration.php" method="POST">
     <input type="hidden"/>
     <input placeholder="Type your username here" name="username" type="text"/>
     <input type="submit" value="Register" name="submit"/>
 </form>
+<div class="text-center">
 <?php
     require_once "config.php";
     if(isset($_SESSION['username'])){
@@ -37,12 +40,19 @@
         exit();
     }
     mysqli_query($connection, "INSERT INTO `users` (`id`,`username`) VALUES (NULL, '$username')") or die("");
-    echo "<h1>Thanks for signing up for TabShare</h1><br/>
-    <a href='text.txt' type='button' class='btn btn-primary' download>Download for Chrome</a>";
+    echo "<h1 class='text-center'>Thanks for signing up for TabShare</h1><br/>
+    <a id='general-center' href='text.txt' type='button' class='btn btn-primary' download>Download for Chrome</a>";
         session_start();
         $_SESSION['username'] = $username;
     }
     }
     }
 ?>
+    </div>
+    <nav class="navbar navbar-default navbar-static-bottom" role="navigation">
+        <div class="container text-center">
+            <a href="./contact.html">Contact Us</a> | <a href="https://github.com/playerzomb/Codeday">Github</a> | <a href="./login.php">Log In</a> | <a href="./registration.php">Register</a>
+        </div>
+    </nav>
+</body>
 </html>
