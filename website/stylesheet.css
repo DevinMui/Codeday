@@ -52,4 +52,8 @@ body{
 }
 .jumbotron{
     background: url('assets/GroupPicture.jpg') no-repeat center center;
+    height: 350px;
+}
+#fixed{
+    position: fixed;
 }
