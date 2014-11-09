@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tab Share",
+  "description": "TabShare allows you to instantly share and access the tabs of your peers.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://tabshare.nancoder.com/index.html"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
