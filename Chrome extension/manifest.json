@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "permissions": [
-    "http://23.229.227.134"
+    "http://tabshare.nancoder.com"
   ],
   "browser_action": {
     "default_icon": "icon.png",
