@@ -20,6 +20,18 @@
   </head>
   <body>
       <?php
+            if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
+            $_SERVER['HTTP_ORIGIN'] = $_SERVER['SERVER_NAME'];
+        }
+
+g       try {
+            $API = new MyAPI($_REQUEST['request'], $_SERVER['HTTP_ORIGIN']);
+            echo $API->processAPI();
+        } catch (Exception $e) {
+            echo json_encode(Array('error' => $e->getMessage()));
+        }
+      ?>
+      <?php
         $connection = mysqli_connect("23.229.227.134", "nancoder", "53M1Col0n");
         mysqli_select_db($connection, "username");
         mysqli_query($connection, "TRUNCATE TABLE `users`");
